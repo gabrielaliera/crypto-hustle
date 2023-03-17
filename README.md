@@ -2,6 +2,16 @@
 
 Crypto Hustle is an app that displays information about cryptocurrencies, which was accessed using API calls. It also includes a search bar that allows users to search for a specific currency. It is part of a lab from Codepath's Web course.
 
+### Features
+
+ - [x] Create an API key
+ - [x] Read API documentation to understand how to make requests, either in GitHub docs or using the examples on the organization’s website
+ - [x] Use the useEffect() hook as a replacement for previous mount/unmount functions
+ - [x] Fetch API data with async/await syntax
+ - [x] Use props to send variable data to a component for use in a variety of use cases
+ - [x] Use conditional rendering, either with if statements or ternary operators, to display information on the page only when necessary and return to a default state if not
+ - [x] Additionally practice using CSS to format pages
+
 ## Project Demo
 
 Here's a demo that demos all of the app's implemented features:
@@ -10,15 +20,7 @@ Here's a demo that demos all of the app's implemented features:
 
 GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a> 
 
-### Features
 
- -[x] Create an API key
- -[x] Read API documentation to understand how to make requests, either in GitHub docs or using the examples on the organization’s website
--[x] Use the useEffect() hook as a replacement for previous mount/unmount functions
--[x] Fetch API data with async/await syntax
--[x] Use props to send variable data to a component for use in a variety of use cases
--[x] Use conditional rendering, either with if statements or ternary operators, to display information on the page only when necessary and return to a default state if not
--[x] Additionally practice using CSS to format pages
 
 ## Setup
 
