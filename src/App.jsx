@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import CoinInfo from "./Components/coinInfo";
 import SideNav from "./Components/sideNav";
+
 //import { Input } from "semantic-ui-react";
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
