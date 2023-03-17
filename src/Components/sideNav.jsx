@@ -1,8 +1,9 @@
 import React from 'react';
+import CryptoScam from "./cryptoScam";
 
 const SideNav = () => (
   <div className="sideNav">
-    <h1>here is my side nav bar</h1>
+    <CryptoScam/>
   </div>
 );
 
