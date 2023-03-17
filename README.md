@@ -7,13 +7,15 @@ This lab is an app that displays information about cryptocurrencies, which was a
 
 🌐 [See the project deployed here!](https://steady-cannoli-5d4e1b.netlify.app/)
 
-### Required Features
+### Features
 
-![demo with required features](readme_demo_required.png)
-
-### Stretch Features
-
-![demo with stretch features](readme_demo_stretch.png)
+ -[x] Create an API key
+ -[x] Read API documentation to understand how to make requests, either in GitHub docs or using the examples on the organization’s website
+-[x] Use the useEffect() hook as a replacement for previous mount/unmount functions
+-[x] Fetch API data with async/await syntax
+-[x] Use props to send variable data to a component for use in a variety of use cases
+-[x] Use conditional rendering, either with if statements or ternary operators, to display information on the page only when necessary and return to a default state if not
+-[x] Additionally practice using CSS to format pages
 
 ## Setup
 
@@ -51,23 +53,6 @@ Visit the web application in the browser
 ```console
 http://localhost:5173/
 ```
-
-### Deploy Crypto Hustle Lite
-
-To deploy this application on Netlify, run the following in the repo directory:
-
-```sh
-npm install
-npm run build
-```
-
-Upload the generated `dist` file to Netlify at:
-
-```html
-https://app.netlify.com/drop
-```
-
-<br/>
 
 ---
 
