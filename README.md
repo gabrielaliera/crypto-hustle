@@ -1,6 +1,6 @@
 # Crypto-hustle
 
-Crypto Hustle is an app that displays information about cryptocurrencies, which was accessed using API calls. It also includes a search bar that allows users to search for a specific currency. It is part of a lab from Codepath's Web course.
+Crypto Hustle Pro is an app that displays information about cryptocurrencies, which was accessed using API calls. It also includes a search bar that allows users to search for a specific currency. It is part of a lab from Codepath's Web course.
 
 ### Features
 
