@@ -1,7 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
-const CoinInfo = ({ image, name, symbol}) => {
+
+
+const CoinInfo = ({ image, name, symbol, index}) => {
     const [price, setPrice] = useState(null);
   
     useEffect(() => {
@@ -18,13 +22,20 @@ const CoinInfo = ({ image, name, symbol}) => {
       return (
         <div>
           {price ? ( // rendering only if API call actually returned us data
-            <li className="main-list" key={symbol}>
+            <li className="main-list" key={index}>
               <img
                 className="icons"
                 src={`https://www.cryptocompare.com${image}`}
                 alt={`Small icon for ${name} crypto coin`}
               />
-               {name}<span className="tab"></span>${price.USD} USD
+              <Link
+                style={{ color: "white" }}
+                to={`/coinDetails/${symbol}`}
+                key={symbol}
+              >
+               {name} <span className="tab"></span> ${price.USD} USD
+              </Link>
+               
             </li>
           ) : 
           null

@@ -1,8 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
-
-
+import CoinChart from "./coinChart";
 
 const CoinDetail = () => {
 
@@ -25,6 +24,8 @@ const CoinDetail = () => {
           const detailsJson = await details.json();
           const descripJson = await description.json();
         
+          console.log(detailsJson.DISPLAY)
+          console.log(descripJson.DATA)
           setFullDetails({"numbers": detailsJson.DISPLAY, "textData": descripJson.Data});
         };
 
@@ -53,58 +54,68 @@ const CoinDetail = () => {
                     <tbody> 
                         <tr>
                             <th>Launch Date </th>
-                            <td> </td>
+                            <td> {fullDetails.description[params.symbol].AssetLaunchDate}</td>
                         </tr>
                         <tr>
                             <th>Website </th>
-                            <td> </td>
+                            <td> <a href={fullDetails.description[params.symbol].AssetWebsiteUrl}> {fullDetails.description[params.symbol].AssetWebsiteUrl}</a></td>
                         </tr>
                         <tr>
                             <th>Whitepaper </th>
-                            <td> </td>
+                            <td><a href={fullDetails.description[params.symbol].AssetWhitepaperUrl}> {fullDetails.description[params.symbol].AssetWhitepaperUrl}</a> </td>
                         </tr>
                         <tr>
                             <th>Monetary Symbol </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.FROMSYMBOL}</td>
                         </tr>
                         <tr>
                             <th>Market </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.MARKET}</td>
                         </tr>
                         <tr>
                             <th>Last Transaction </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.LASTUPDATE}</td>
                         </tr>
                         <tr>
                             <th>Last Transaction Value</th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.LASTVOLUMETO}{" "}
+                                <span className="small-tab"></span>
+                                {fullDetails.numbers[params.symbol].USD.LASTVOLUME} 
+                            </td>
                         </tr>
                         <tr>
                             <th>Volume </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.VOLUMEDAYTO}</td>
                         </tr>
                         <tr>
                             <th>Today's Open Price </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.OPENDAY}</td>
                         </tr>
                         <tr>
                             <th>Highest Price during the Day </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.HIGHDAY}</td>
                         </tr>
                         <tr>
                             <th>Lowest Price during the Day </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.LOWDAY}</td>
                         </tr>
                         <tr>
                             <th>Change from Previous Day </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.CHANGEDAY}
+                                <span className="small-tab"></span>
+                                {fullDetails.numbers[params.symbol].USD.CHANGEPCTDAY}%
+                            </td>
                         </tr>
                         <tr>
                             <th>Market Cap </th>
-                            <td> </td>
+                            <td>{fullDetails.numbers[params.symbol].USD.MKTCAP}</td>
                         </tr>
                     </tbody>
                 </table>
+                <CoinChart
+                    symbol={params.symbol}
+                    market={fullDetails.numbers[params.symbol].USD.MARKET}
+                />
             </div>
         
         : null}

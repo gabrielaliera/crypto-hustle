@@ -51,21 +51,23 @@ function App() {
         />
         <ul>
           {searchInput.length > 0
-          ? filteredResults.map((coin) => 
+          ? filteredResults.map((coin, index) => 
                 list.Data[coin].PlatformType === "blockchain" ? 
                 <CoinInfo
                   image={list.Data[coin].ImageUrl}
                   name={list.Data[coin].FullName}
                   symbol={list.Data[coin].Symbol}
+                  key={index}
                 />
                 : null
             )
-          : list && Object.entries(list.Data).map(([coin]) => 
+          : list && Object.entries(list.Data).map(([coin], index) => 
                 list.Data[coin].PlatformType === "blockchain" ? 
                 <CoinInfo
                   image={list.Data[coin].ImageUrl}
                   name={list.Data[coin].FullName}
                   symbol={list.Data[coin].Symbol}
+                  key={index}
                 />
                 : null
              )}
