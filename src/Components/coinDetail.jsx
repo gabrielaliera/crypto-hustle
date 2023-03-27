@@ -25,8 +25,13 @@ const CoinDetail = () => {
           const descripJson = await description.json();
         
           console.log(detailsJson.DISPLAY)
-          console.log(descripJson.DATA)
-          setFullDetails({"numbers": detailsJson.DISPLAY, "textData": descripJson.Data});
+          console.log("step")
+          console.log(descripJson.Data)
+          
+          setFullDetails({
+            numbers: detailsJson.DISPLAY,
+            description: descripJson.Data,
+          });
         };
 
         getCoinDetail().catch(console.error);
@@ -37,17 +42,17 @@ const CoinDetail = () => {
       <div>
         {fullDetails ? 
             <div>
-                <h1>{fullDetails.textData[params.symbol].FullName}</h1>
+                <h1>{fullDetails.description[params.symbol].FullName}</h1>
                 <img
                     className="images"
                     src={`https://www.cryptocompare.com${fullDetails.numbers[params.symbol].USD.IMAGEURL}`}
                     alt={`Small icon for ${params.symbol} crypto coin`}
                 />
-                <div> {fullDetails.textData[params.symbol].Description}</div>
+                <div> {fullDetails.description[params.symbol].Description}</div>
                 <br></br>
                 <div>
                     This coin was built with the algorithm{" "}
-                    {fullDetails.textData[params.symbol].Algorithm}{" "}
+                    {fullDetails.description[params.symbol].Algorithm}{" "}
                 </div>
                 <br></br>
                 <table>

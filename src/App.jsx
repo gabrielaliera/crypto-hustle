@@ -42,7 +42,7 @@ function App() {
   
   return (
     <div className="whole-page">
-      <SideNav/>
+      {/*<SideNav/>  remove sidenav due to api not working*/}
       <h1>My Crypto List</h1>
         <input
           type="text"
