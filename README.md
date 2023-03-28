@@ -28,8 +28,7 @@ GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a>
 
 Part 2:
 
-todo: after api call rate limit resets
-<img src='' title='Crypto Hustle Pro' width='' heigth="" alt='App Demo' />
+<img src='https://github.com/gabrielaliera/crypto-hustle/blob/master/crypto-pro-walkthrough.gif' title='Crypto Hustle Pro' width='' heigth="" alt='App Demo' />
 GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a> 
 
 ## Setup
