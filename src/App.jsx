@@ -17,6 +17,7 @@ function App() {
     const fetchAllCoinData = async () => {
       const response = await fetch("https://min-api.cryptocompare.com/data/all/coinlist?&api_key" + API_KEY);
       const json = await response.json();
+      console.log(json);
       setList(json);
     };
 
